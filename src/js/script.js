@@ -36,6 +36,7 @@ minus.addEventListener("click", () => {
   minus.style.color = "white";
   text.style.color = "yellow";
 });
+text.appendChild(b);
 /* let div = document.createElement("div"); */
 
 //! SECOND
