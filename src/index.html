@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
+      /* body {
         display: flex;
         gap: 40px;
         justify-content: center;
@@ -14,7 +14,8 @@
       .minus {
         font-size: 48px;
         width: 200px;
-        border-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
         border: 0;
         cursor: pointer;
       }
@@ -24,16 +25,47 @@
       .plus {
         font-size: 48px;
         width: 200px;
-        border-radius: 90%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
         border: 0;
         cursor: pointer;
+      } */
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      input {
+        width: 500px;
+        height: 100px;
+        padding-left: 20px;
+        font-size: 28px;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.65);
+        color: black;
+      }
+      .text {
+        position: absolute;
+        top: 40px;
+        font-size: 68px;
+        margin-left: 50px;
       }
     </style>
   </head>
   <body>
-    <button class="minus">-</button>
+    <!-- <button class="minus">-</button>
     <p class="text"></p>
-    <button class="plus">+</button>
+    <button class="plus">+</button> -->
+    <div class="box">
+      <input class="input" id="input-text1" type="text" placeholder="Search1" />
+      <input class="input" id="input-text2" type="text" placeholder="Search2" />
+      <input class="input" id="input-text3" type="text" placeholder="Search3" />
+      <input class="input" id="input-text4" type="text" placeholder="Search4" />
+      <input class="input" id="input-text5" type="text" placeholder="Search5" />
+      <input class="input" id="input-text6" type="text" placeholder="Search6" />
+    </div>
 
     <script src="./js/script.js"></script>
   </body>

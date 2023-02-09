@@ -1,42 +1,42 @@
 //! DOM
 //! FIRST
-let p = 0;
-let text = document.querySelector(".text");
-let minus = document.querySelector(".minus");
-let plus = document.querySelector(".plus");
-let b = document.createElement("b");
+// let p = 0;
+// let text = document.querySelector(".text");
+// let minus = document.querySelector(".minus");
+// let plus = document.querySelector(".plus");
+// let b = document.createElement("b");
 
-text.innerHTML = p;
+// text.innerHTML = p;
 
-function incrementCount() {
-  p += 10;
-  text.innerHTML = p;
-  b.innerHTML = "Вы прибавали число!";
-  alert(b.innerHTML);
-}
-function decrementCount() {
-  p -= 10;
-  text.innerHTML = p;
-  b.innerHTML = "Вы отняли число!";
-  alert(b.innerHTML);
-}
-plus.addEventListener("click", () => {
-  incrementCount();
-  document.body.style.backgroundColor = "skyblue";
-  plus.style.backgroundColor = "yellow";
-  plus.style.color = "red";
-  text.style.color = "black";
-  b.style.color = "black";
-  b.style.fontSize = "50px";
-});
-minus.addEventListener("click", () => {
-  decrementCount();
-  document.body.style.backgroundColor = "gray";
-  minus.style.backgroundColor = "red";
-  minus.style.color = "white";
-  text.style.color = "yellow";
-});
-text.appendChild(b);
+// function incrementCount() {
+//   p += 10;
+//   text.innerHTML = p;
+//   b.innerHTML = "Вы прибавали число!";
+//   alert(b.innerHTML);
+// }
+// function decrementCount() {
+//   p -= 10;
+//   text.innerHTML = p;
+//   b.innerHTML = "Вы отняли число!";
+//   alert(b.innerHTML);
+// }
+// plus.addEventListener("click", () => {
+//   incrementCount();
+//   document.body.style.backgroundColor = "skyblue";
+//   plus.style.backgroundColor = "yellow";
+//   plus.style.color = "red";
+//   text.style.color = "black";
+//   b.style.color = "black";
+//   b.style.fontSize = "50px";
+// });
+// minus.addEventListener("click", () => {
+//   decrementCount();
+//   document.body.style.backgroundColor = "gray";
+//   minus.style.backgroundColor = "red";
+//   minus.style.color = "white";
+//   text.style.color = "yellow";
+// });
+// text.appendChild(b);
 /* let div = document.createElement("div"); */
 
 //! SECOND
@@ -142,3 +142,21 @@ text.appendChild(b);
 
 //   text.appendChild(b);
 // })();
+
+//! FIFTH
+let inputText1 = document.getElementById("input-text");
+let inputText = document.querySelector("#input-text");
+let box = document.querySelector(".box");
+
+let p = document.createElement("p");
+p.className = "text";
+box.addEventListener("change", (event) => {
+  //console.log(event.target) //! CHILD - РЕБЕНОК
+  //console.log(event.currentTarget) //? PARENTS - РОДИТЕЛИ
+  let data = event.target.value;
+  p.style.transition = "all 3s";
+  p.style.color = "green";
+  p.innerText = data;
+
+  document.body.appendChild(p);
+});
